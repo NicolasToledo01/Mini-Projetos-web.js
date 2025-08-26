@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(120deg, #f0f4f8 0%, #c2e9fb 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imc-container {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.15);
+  max-width: 350px;
+  width: 100%;
+}
+
+.imc-container h1 {
+  text-align: center;
+  color: #1976d2;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #1565c0;
+  font-weight: 500;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #b3c2d2;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+input[type="number"]:focus {
+  border-color: #1976d2;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.7rem;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #1565c0;
+}
+
+.mensagem-erro {
+  color: #d32f2f;
+  margin-top: 0.7rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.resultado-imc {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #1976d2;
+}
+
+.classificacao {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: #1565c0;
+  font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+  .imc-container {
+    padding: 1rem;
+    max-width: 95vw;
+  }
+  .imc-container h1 {
+    font-size: 1.3rem;
+  }
+}

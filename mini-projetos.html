@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Projetos</title>
+    <link rel="stylesheet" href="mini-projetos.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-logo">Mini Projetos</div>
+      <ul class="nav-list">
+        <li>
+          <a href="#" class="active" data-src="Tabuada/index.html">Tabuada</a>
+        </li>
+        <li>
+          <a href="#" data-src="calculadora-imc/calculadora-imc.html"
+            >Calculadora de IMC</a
+          >
+        </li>
+        <li>
+          <a href="#" data-src="jogo-da-velha/jogo-da-velha.html"
+            >Jogo da Velha</a
+          >
+        </li>
+        <li>
+          <a href="#" data-src="relogio-digital/relogio-digital.html"
+            >Relogio Digital</a
+          >
+        </li>
+        <li>
+          <a href="#" data-src="snakeGame/snake-Game.html">Snake Game</a>
+        </li>
+        <li>
+          <a href="#" data-src="cronometro/cronometro.html">Cronômetro</a>
+        </li>
+        <li>
+          <a href="#" data-src="todo-list/todo-list.html">Lista de Tarefas</a>
+        </li>
+        <!-- Adicione outros projetos futuramente -->
+      </ul>
+    </nav>
+    <main class="main-content">
+      <iframe src="Tabuada/index.html" title="Tabuada" frameborder="0"></iframe>
+    </main>
+    <script>
+      // Troca o projeto exibido no iframe ao clicar no menu
+      document.querySelectorAll(".nav-list a").forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          document
+            .querySelectorAll(".nav-list a")
+            .forEach((a) => a.classList.remove("active"));
+          this.classList.add("active");
+          document.querySelector("iframe").src = this.getAttribute("data-src");
+          document.querySelector("iframe").title = this.textContent;
+        });
+      });
+    </script>
+  </body>
+</html>

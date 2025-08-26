@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(120deg, #e3e3e3 0%, #b3c2d2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.relogio-container {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(25, 118, 210, 0.12);
+  text-align: center;
+  max-width: 350px;
+  width: 100%;
+  transition: background 0.3s, color 0.3s;
+}
+
+.relogio-container h1 {
+  color: #1976d2;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.relogio {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #222;
+  background: #f0f4f8;
+  border-radius: 12px;
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+  letter-spacing: 4px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  transition: background 0.3s, color 0.3s;
+}
+
+#toggle-mode {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.12);
+  transition: background 0.3s;
+}
+
+#toggle-mode:hover {
+  background: #1565c0;
+}
+
+/* Modo escuro */
+body.dark-mode {
+  background: linear-gradient(120deg, #222 0%, #444 100%);
+}
+
+body.dark-mode .relogio-container {
+  background: #222;
+  color: #fff;
+}
+
+body.dark-mode .relogio-container h1 {
+  color: #b3c2d2;
+}
+
+body.dark-mode .relogio {
+  background: #333;
+  color: #b3c2d2;
+}
+
+body.dark-mode #toggle-mode {
+  background: #444;
+  color: #b3c2d2;
+}
+
+body.dark-mode #toggle-mode:hover {
+  background: #222;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+  .relogio-container {
+    padding: 1rem;
+    max-width: 95vw;
+  }
+  .relogio-container h1 {
+    font-size: 1.3rem;
+  }
+  .relogio {
+    font-size: 1.5rem;
+    padding: 0.7rem 0;
+  }
+}

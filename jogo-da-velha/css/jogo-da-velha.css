@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #2d0036 0%, #6c2eb7 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.velha-container {
+  background: #1a0022;
+  padding: 2rem 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(108, 46, 183, 0.25);
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+}
+
+.velha-container h1 {
+  color: #b47cff;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.status {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  min-height: 1.5em;
+}
+
+.tabuleiro {
+  display: grid;
+  grid-template-columns: repeat(3, 70px);
+  grid-template-rows: repeat(3, 70px);
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.celula {
+  background: #2d0036;
+  border: 2px solid #b47cff;
+  border-radius: 12px;
+  font-size: 2.2rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(108, 46, 183, 0.15);
+  user-select: none;
+}
+
+.celula:hover {
+  background: #6c2eb7;
+}
+
+.celula.x {
+  color: #b47cff;
+  text-shadow: 0 0 8px #b47cff88;
+}
+
+.celula.o {
+  color: #ff6cff;
+  text-shadow: 0 0 8px #ff6cff88;
+}
+
+.celula.vencedor {
+  background: #000;
+  color: #fff;
+  border-color: #ff6cff;
+  box-shadow: 0 0 16px #ff6cff88;
+}
+
+#reiniciar {
+  background: linear-gradient(90deg, #b47cff 0%, #6c2eb7 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(108, 46, 183, 0.15);
+  transition: background 0.2s;
+}
+
+#reiniciar:hover {
+  background: linear-gradient(90deg, #6c2eb7 0%, #b47cff 100%);
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+  .velha-container {
+    padding: 1rem;
+    max-width: 95vw;
+  }
+  .tabuleiro {
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 7px;
+  }
+  .velha-container h1 {
+    font-size: 1.3rem;
+  }
+}

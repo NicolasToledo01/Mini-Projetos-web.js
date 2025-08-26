@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #2d0036 0%, #6c2eb7 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.snake-container {
+  background: #1a0022;
+  padding: 2rem 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(108, 46, 183, 0.25);
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+}
+
+.snake-container h1 {
+  color: #b47cff;
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.score {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+canvas {
+  background: #2d0036;
+  border: 2px solid #b47cff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(108, 46, 183, 0.15);
+  margin-bottom: 1.2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#restart {
+  background: linear-gradient(90deg, #b47cff 0%, #6c2eb7 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(108, 46, 183, 0.15);
+  transition: background 0.2s;
+}
+
+#restart:hover {
+  background: linear-gradient(90deg, #6c2eb7 0%, #b47cff 100%);
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+  .snake-container {
+    padding: 1rem;
+    max-width: 95vw;
+  }
+  .snake-container h1 {
+    font-size: 1.3rem;
+  }
+  canvas {
+    width: 220px !important;
+    height: 220px !important;
+  }
+}

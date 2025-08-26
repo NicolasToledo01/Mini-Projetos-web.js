@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(120deg, #f0f4f8 0%, #c2e9fb 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-container {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(25, 118, 210, 0.12);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.todo-container h1 {
+  color: #1976d2;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+#todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+
+#todo-form input,
+#todo-form textarea {
+  padding: 0.7rem;
+  border: 1px solid #b3c2d2;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+#todo-form input:focus,
+#todo-form textarea:focus {
+  border-color: #1976d2;
+}
+
+#todo-form button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.12);
+  transition: background 0.2s;
+}
+
+#todo-form button:hover {
+  background: #1565c0;
+}
+
+.lista-tarefas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tarefa {
+  background: #f0f4f8;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  position: relative;
+  text-align: left;
+  animation: fadeIn 0.4s;
+}
+
+.tarefa-titulo {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1976d2;
+  margin-bottom: 0.4rem;
+}
+
+.tarefa-descricao {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.7rem;
+}
+
+.tarefa button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.tarefa button:hover {
+  background: #b71c1c;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+  .todo-container {
+    padding: 1rem;
+    max-width: 95vw;
+  }
+  .todo-container h1 {
+    font-size: 1.3rem;
+  }
+}

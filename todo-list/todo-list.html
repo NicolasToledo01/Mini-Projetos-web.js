@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/todo-list.css" />
+  </head>
+  <body>
+    <div class="todo-container">
+      <h1>Todo List</h1>
+      <form id="todo-form">
+        <input
+          type="text"
+          id="titulo"
+          placeholder="Título da tarefa"
+          required
+        />
+        <textarea id="descricao" placeholder="Descrição" rows="2"></textarea>
+        <button type="submit">Adicionar</button>
+      </form>
+      <ul id="lista-tarefas" class="lista-tarefas"></ul>
+    </div>
+    <script src="js/todo-list.js"></script>
+  </body>
+</html>
